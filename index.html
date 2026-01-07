@@ -21,23 +21,23 @@
         >
       </div>
     </nav>
-    <form action="">
+    <form action="" method="get">
       <table>
         <tr>
           <td><label for="name">Client Name</label></td>
-          <td><input type="text" id="name" name="name"></td>
+          <td><input type="text" id="name" name="name" required></td>
         </tr>
         <tr>
           <td><label for="account">Account Number</label></td>
-          <td><input type="text" id="account" name="account"></td>
+          <td><input type="text" id="account" name="account" required></td>
         </tr>
         <tr>
           <td>Type</td>
-          <td><input type="radio" id="4g" name="dtype" value="4G"><label for="4g">4G</label> <br><input type="radio" id="fiber" name="dtype" value="fiber"><label for="fiber">Fiber</label></td>
+          <td><input type="radio" id="4g" name="dtype" value="4G" required><label for="4g">4G</label> <br><input type="radio" id="fiber" name="dtype" value="fiber" required><label for="fiber">Fiber</label></td>
         </tr>
         <tr>
           <td><label for="internet">Internet Package</label></td>
-          <td><select name="internet" id="internet">
+          <td><select name="internet" id="internet" required>
             <option value="basic">Basic</option>
             <option value="weblite">Web Lite</option>
             <option value="anyblast">Any Blast</option>
@@ -46,9 +46,10 @@
         </tr>
         <tr>
           <td><label for="extra">Extra GB used</label></td>
-          <td><input type="text" id="extra" name="extra"></td>
+          <td><input type="text" id="extra" name="extra" required></td>
         </tr>
       </table>
+      <input type="submit" value="Calculate">
     </form>
 
 
