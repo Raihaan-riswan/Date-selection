@@ -1,5 +1,5 @@
 <?php
- $name = $account = $dtype = $internet = $extra = "";
+ $name = $account = $dtype = $internet = "";
  $name = $_POST['name'];
  $account = $_POST['account'];
  $dtype = $_POST['dtype'];
@@ -27,6 +27,31 @@ elseif ($internet == 'anyblast'){
 }
 else{
     $internetpri = 3790;
+};
+
+// this is extra gb code
+
+if ((int)$extra <= 4){
+    $extrapri = 100* $extra;
 }
+elseif((int)$extra <=19){
+    $extramin = $extra - 4;
+    $extrapri = (100 * 4) + (85 * $extramin);
+}
+elseif((int)$extra <= 49){
+    $extramin = $extra - 19;
+    $extrapri = (100 * 4) + (85 * 15) + (75 * $extramin);
+}
+elseif($extra > 49){
+    $extramin = $extra - 49;
+    $extrapri = (100 * 4) + (85 * 15) + (75 * 30) + (60 * $extramin) ;
+}
+else{
+    $extrapri = 0;
+};
+echo($extrapri);
+
+
+
 
 ?>
