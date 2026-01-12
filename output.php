@@ -1,10 +1,10 @@
 <?php
  $name = $account = $dtype = $internet = $extra = "";
- $_POST['name'];
- $_POST['account'];
- $_POST['dtype'];
- $_POST['internet'];
- $_POST['extra'];
+ $name = $_POST['name'];
+ $account = $_POST['account'];
+ $dtype = $_POST['dtype'];
+ $internet = $_POST['internet'];
+ $extra = $_POST['extra'];
 
 
 //  this is for fiber value code
