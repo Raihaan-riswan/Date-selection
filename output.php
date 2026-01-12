@@ -50,7 +50,7 @@ else{
     $extrapri = 0;
 };
 
-
+$total = $dtypepri + $internetpri + $extrapri;
 
 
 
@@ -61,3 +61,28 @@ else{
  <h1>Internet Usage BIll of Account Number :<?php echo ($account);?></h1>
  <h3>Customer Name : <?php echo($name);?></h3><h3>Interner Package : <?php echo($internet);?></h3>
  <hr>
+ <table>
+    <tr>
+        <th></th>
+        <th>Units</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Rental : <?php echo ($dtype);?></td>
+        <td></td>
+        <td><?php echo ($dtypepri);?></td>
+    </tr>
+    <tr>
+        <td>Monthly Rental</td>
+        <td></td>
+        <td><?php echo ($internetpri);?></td>
+    </tr>
+    <tr>
+        <td>Extra GB used</td>
+        <td><?php echo($extra);?></td>
+        <td><?php echo ($extrapri);?></td>
+    </tr>
+    <tr><td><b>Total</b></td>
+    <td></td>
+    <td><?php echo($total);?></td></tr>
+ </table>
