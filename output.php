@@ -16,6 +16,14 @@
 
 // this is for internet packages
 
-if ()
+if ($internet == 'basic'){
+    $internetpri = 760;
+} 
+elseif ($internet == 'weblite'){
+    $internetpri = 1520;
+}
+elseif ($internetpri == 'anyblast'){
+    $internetpri = 2340;
+}
 
 ?>
