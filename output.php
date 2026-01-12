@@ -22,8 +22,11 @@ if ($internet == 'basic'){
 elseif ($internet == 'weblite'){
     $internetpri = 1520;
 }
-elseif ($internetpri == 'anyblast'){
+elseif ($internet == 'anyblast'){
     $internetpri = 2340;
+}
+else{
+    $internetpri = 3790;
 }
 
 ?>
