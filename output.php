@@ -1,3 +1,71 @@
+<style>
+    body {
+  background: #f9f9f9;
+  font-family: "Courier New", monospace; /* printed feel */
+  font-size: 13px;
+  color: #111;
+}
+
+h1, h3 {
+  margin: 4px 0;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #333; /* dashed line like receipts */
+  margin: 8px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 1px solid #333;
+  padding: 4px 0;
+  text-align: left;
+}
+
+td {
+  padding: 4px 0;
+}
+
+td:nth-child(2) {
+  text-align: center;
+  color: #555;
+}
+
+td:nth-child(3) {
+  text-align: right;
+}
+
+tr:not(:last-child) td {
+  border-bottom: 1px dotted #ccc; /* dotted separators */
+}
+
+tr:last-child td {
+  border-top: 1px solid #333;
+  font-weight: bold;
+  padding-top: 6px;
+}
+.receipt { width: 320px; /* typical roll width */ margin: 20px auto; padding: 12px; border: 1px solid #333; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+/* Print-friendly */
+@media print {
+  body {
+    background: #fff;
+    margin: 0;
+  }
+  hr {
+    border-top-style: solid; /* clearer print line */
+  }
+}
+
+</style>
+
+
 <?php
  $name = $account = $dtype = $internet = "";
  $name = $_POST['name'];
@@ -58,7 +126,16 @@ $total = $dtypepri + $internetpri + $extrapri;
 
 ?>
 <!-- out put -->
- <h1>Internet Usage BIll of Account Number :<?php echo ($account);?></h1>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div class ="receipt">
+    <h1>Internet Usage BIll of Account Number :<?php echo ($account);?></h1>
  <h3>Customer Name : <?php echo($name);?></h3><h3>Interner Package : <?php echo($internet);?></h3>
  <hr>
  <table>
@@ -86,3 +163,8 @@ $total = $dtypepri + $internetpri + $extrapri;
     <td></td>
     <td><?php echo($total);?></td></tr>
  </table>
+ </div>
+ </body>
+ </html>
+
+ 
