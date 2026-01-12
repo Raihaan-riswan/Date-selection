@@ -6,6 +6,14 @@
  $_POST['internet'];
  $_POST['extra'];
 
- 
+
+//  this is for fiber value code
+ if ($dtype =='fiber'){
+    $dtypepri = 760;
+ }else{
+    $dtypepri = 0;
+ };
+
+
 
 ?>
