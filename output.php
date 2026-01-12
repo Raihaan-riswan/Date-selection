@@ -49,9 +49,15 @@ elseif($extra > 49){
 else{
     $extrapri = 0;
 };
-echo($extrapri);
+
+
+
 
 
 
 
 ?>
+<!-- out put -->
+ <h1>Internet Usage BIll of Account Number :<?php echo ($account);?></h1>
+ <h3>Customer Name : <?php echo($name);?></h3><h3>Interner Package : <?php echo($internet);?></h3>
+ <hr>
